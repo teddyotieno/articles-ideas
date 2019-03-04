@@ -1,0 +1,28 @@
+Execution Contexts
+
+- It's an abstract concept, and it's technical implementation  is left for the various JS engines, used for typification and differentiation of executable code.
+    that holds information about the environment within which the current code is being executed. Code is being evaluated in.
+- Concept is directly tied, to the JS engine, i.e the intepreter
+- Tell that it's a widely misunderstood JS concept, and again it ties to a lot of JS concepts, and at times it's confused with them.
+- When code is run in JS, the environment in which it is executed is equally important as well
+
+- It's hard to talk about ec, without touching on Scope, Execution Stack, Scoping chaining, what does this point to
+- It's an implementation of the specification to deterimine the typification of executable code, 
+- Concept of executable code, types of executable code
+    - Global Execution
+    - Funciton Execution - Whenever flow of execution enters a funciton body, every function call creates a new execution context, even a call to itself
+- Execution context are usually what's added to the execution stack
+- When JS engine starts reading code
+    - Global Execution Context is created, also sometimes referred to as global or window object. They can only every be one global context, and this can be accessed within any other ecs in your program/code
+    - With every invocation or calling of a funciton, a new ec is always created...it would be good to point out that in other C like languages this can be created at the block level
+    - Every time an ec context is created, the this variable is also created, and it's contextualized
+- 2 passes usually happen when the JS engine is running through your code: - memory creation phase, and the execution phase....you can state that this is of course an oversimplification
+    - Creation of Scope 
+    - Creation of the scope chain
+    - Determination of the value of this
+        - Every execution context also has a special variable this. Which in this case it points to an object to which the current code that's executing belongs to
+
+- Every function invocation/call creates an ec, which creates a private scope where anything declared inside of the function, can not be directly accessed from outside the current function scope,
+    a function can access a variable declared outside of it's current context, but an outside context can not access the variables/functions declared inside
+-
+
